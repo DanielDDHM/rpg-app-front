@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Recover = () => {
+  let navigate = useNavigate();
+  const routeChange = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <div className="Auth-form-container">
       <form className="Auth-form">
@@ -14,6 +20,9 @@ const Recover = () => {
           <div className="d-grid gap-2 mt-3">
             <button type="submit" className="btn btn-primary">
               Submit
+            </button>
+            <button type="submit" className="btn btn-primary" onClick={() => routeChange('/')}>
+              Back To Login
             </button>
           </div>
         </div>

@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './index.css';
 
 const Login = () => {
+  let navigate = useNavigate();
+  const routeChange = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <div className="Auth-form-container">
       <form className="Auth-form">
@@ -19,9 +25,16 @@ const Login = () => {
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => routeChange('register')}
+            >
+              Register
+            </button>
           </div>
           <p className="text-center mt-2">
-            Forgot <a href="#">password?</a>
+            Forgot <a href="recover">password?</a>
           </p>
         </div>
       </form>

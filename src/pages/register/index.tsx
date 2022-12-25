@@ -1,7 +1,7 @@
-// import React, { useState } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import request from '../../config/axios';
+// import checkIcon from '../../assets/icons/check.svg';
 
 const Register = () => {
   const [nick, setNick] = useState('');
@@ -28,9 +28,9 @@ const Register = () => {
         phone,
       },
     })
-    .then((res) => res.data)
-    .catch((e) => e.messages)
-  }
+      .then((res) => res.data)
+      .catch((e) => e.messages);
+  };
 
   return (
     <div className="Auth-form-container">

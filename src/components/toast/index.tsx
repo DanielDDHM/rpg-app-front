@@ -16,9 +16,6 @@ interface ToastProps {
 
 const Toast = (props: ToastProps) => {
   const { position, toastList } = props;
-
-  console.log(props);
-
   const [list, setList] = useState(toastList);
 
   useEffect(() => {

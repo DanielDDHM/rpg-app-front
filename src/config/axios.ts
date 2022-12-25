@@ -10,7 +10,7 @@ const request = async (config: AxiosRequestConfig) => {
 
     return {
       status: resp.status,
-      data: resp.data,
+      data: resp.data.data,
     };
   } catch (e: any) {
     console.error(`
